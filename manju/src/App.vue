@@ -1,47 +1,48 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import Julia from './components/Julia.vue'
+import Manuel from './components/Manuel.vue'
 </script>
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+    <div class="jul">
+      <Julia />
+    </div>
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+    <div class="manu">
+      <Manuel />
     </div>
   </header>
-
-  <main>
-    <TheWelcome />
-  </main>
 </template>
 
 <style scoped>
 header {
-  line-height: 1.5;
+  display: flex;
+  width: 100vw;
+  height: 100vh; 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+.jul,
+.manu {
+  flex: 0 0 50%; 
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
 }
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
+.jul {
+  border-right: 1px solid #ccc;
+}
 
-  .logo {
-    margin: 0 2rem 0 0;
-  }
 
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
+html, body, #app {
+  height: 100%;
+  margin: 0;
 }
 </style>
