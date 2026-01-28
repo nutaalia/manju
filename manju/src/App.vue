@@ -16,33 +16,36 @@ import Manuel from './components/Manuel.vue'
 </template>
 
 <style scoped>
+:global(html), 
+:global(body), 
+:global(#app) {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  max-width: none !important;
+  height: 100%;
+  overflow-x: hidden;
+}
+
 header {
   display: flex;
   width: 100vw;
-  height: 100vh; 
+  height: 100vh;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 .jul,
 .manu {
-  flex: 0 0 50%; 
+  flex: 1;
   height: 100%;
-  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
+  box-sizing: border-box;
 }
 
 .jul {
   border-right: 1px solid #ccc;
-}
-
-
-html, body, #app {
-  height: 100%;
-  margin: 0;
 }
 </style>
